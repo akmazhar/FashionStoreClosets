@@ -1,0 +1,52 @@
+/* Premium responsive Offer Ends At styling */
+main .offer {
+  --offer-accent: #d62828;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+  margin: 1rem 0;
+}
+main .offer > p {
+  margin: 0;
+  color: #343434;
+  font-size: clamp(.78rem, 1.5vw, .95rem);
+  font-weight: 700;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+main .offer ul[id="countdown-timer"], main .offer ul.offer-countdown {
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, .7vw, 8px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+main .offer ul[id="countdown-timer"] li, main .offer ul.offer-countdown li {
+  position: relative;
+  min-width: clamp(36px, 5vw, 48px);
+  padding: .55rem .35rem;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #202020, #383838);
+  color: #fff;
+  font: 700 clamp(.85rem, 2vw, 1.15rem)/1.1 'Poppins', sans-serif;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,.14);
+  font-variant-numeric: tabular-nums;
+}
+main .offer ul.offer-countdown li::after {
+  display: block;
+  margin-top: 4px;
+  color: #e6e6e6;
+  font-size: .55rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  content: attr(data-label);
+}
+main .offer.expired .offer-countdown li { background: #777; }
+@media (max-width: 480px) {
+  main .offer { gap: .5rem; }
+  main .offer ul[id="countdown-timer"] li, main .offer ul.offer-countdown li { min-width: 34px; padding: .45rem .25rem; border-radius: 7px; }
+}

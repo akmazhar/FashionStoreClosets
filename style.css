@@ -4031,3 +4031,554 @@ ul {
     height: 420px;
   }
 }
+
+/* FashionStoreCloset Premium Homepage Upgrade
+   Append this stylesheet AFTER your existing style.css.
+   Header, navigation, department menu and search box are intentionally untouched. */
+:root {
+  --closet-ink: #172033;
+  --closet-muted: #667085;
+  --closet-soft: #f6f7f9;
+  --closet-card: #fff;
+  --closet-accent: #e84b62;
+  --closet-accent2: #bd3450;
+  --closet-border: #e8ebf0;
+  --closet-radius: 22px;
+  --closet-shadow: 0 14px 38px rgba(23, 32, 51, 0.08);
+}
+body {
+  color: var(--closet-ink);
+  background: #fff;
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+}
+main {
+  overflow: hidden;
+}
+main .container {
+  width: min(1440px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(14px, 3vw, 36px);
+}
+main .sectop {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+main .sectop h2 {
+  color: var(--closet-ink);
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+main .sectop h2 .circle {
+  background: var(--closet-accent);
+}
+main .sectop .view-all,
+main .view-all {
+  color: var(--closet-accent2);
+  font-weight: 700;
+}
+main .slider {
+  margin: 22px auto 32px;
+}
+main .slider .swiper-slide .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(14px, 2vw, 28px);
+  background: #eef1f5;
+}
+main .slider .item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+main .slider .item:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 18, 32, 0.62),
+    rgba(11, 18, 32, 0.05) 72%
+  );
+  pointer-events: none;
+}
+main .slider .text-content {
+  z-index: 1;
+  position: absolute;
+  left: clamp(20px, 6vw, 72px);
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: min(540px, 75%);
+  color: #fff;
+  gap: 0.7rem;
+}
+main .slider .text-content h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  font-weight: 700;
+  color: #f8d5db;
+}
+main .slider .text-content h2 {
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+main .slider .primary-button,
+main .banners .primary-button {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 23px;
+  background: var(--closet-accent);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(232, 75, 98, 0.25);
+  transition: 0.25s ease;
+}
+main .slider .primary-button:hover,
+main .banners .primary-button:hover {
+  background: var(--closet-accent2);
+  transform: translateY(-2px);
+}
+main .slider .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  opacity: 0.55;
+}
+main .slider .swiper-pagination-bullet-active {
+  width: 25px;
+  border-radius: 8px;
+  opacity: 1;
+}
+main .brands {
+  padding: 18px 0 28px;
+}
+main .brands .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+main .brands .item {
+  flex: 1 1 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+}
+main .brands img {
+  max-width: 125px;
+  max-height: 45px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.65;
+  transition: 0.25s;
+}
+main .brands a:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+main .trending,
+main .features,
+main .product-categories,
+main .widgets {
+  padding: clamp(28px, 4vw, 56px) 0;
+}
+main .trending .products .item,
+main .features .products .item,
+main .product-categories .item,
+main .widgets .item {
+  background: var(--closet-card);
+  border: 1px solid var(--closet-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(23, 32, 51, 0.035);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+main .trending .products .item:hover,
+main .features .products .item:hover,
+main .product-categories .item:hover,
+main .widgets .item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--closet-shadow);
+}
+main .products .media {
+  overflow: hidden;
+  background: #f5f6f8;
+}
+main .products .media img,
+main .product-categories img {
+  transition: transform 0.4s ease;
+}
+main .products .item:hover .media img,
+main .product-categories .item:hover img {
+  transform: scale(1.045);
+}
+main .products .content {
+  padding: 14px 16px 18px;
+}
+main .products .content h3 {
+  line-height: 1.45;
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  font-weight: 700;
+}
+main .products .content h3 a {
+  color: var(--closet-ink);
+}
+main .products .content h3 a:hover {
+  color: var(--closet-accent2);
+}
+main .products .rating {
+  margin-bottom: 7px;
+}
+main .products .price {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 9px 0;
+}
+main .products .price .current {
+  color: var(--closet-accent2);
+  font-weight: 800;
+  font-size: 1.08rem;
+}
+main .products .price .normal {
+  color: #98a1af;
+  text-decoration: line-through;
+}
+main .products .mini-text {
+  color: var(--closet-muted);
+  line-height: 1.55;
+}
+main .products .discount {
+  background: var(--closet-accent);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 5px 14px rgba(232, 75, 98, 0.2);
+}
+main .products .hoverable a {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+main .products .hoverable a:hover {
+  background: var(--closet-accent);
+  color: #fff;
+}
+main .trending .products.big .item {
+  border-radius: 22px;
+}
+main .trending .offer {
+  background: var(--closet-ink);
+  color: #fff;
+  padding: 15px;
+}
+main .trending .offer p {
+  font-weight: 700;
+}
+main .trending .offer #countdown-timer li {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 7px 9px;
+  margin: 3px;
+}
+main .stock .bar {
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e9edf2;
+}
+main .stock .bar .available {
+  background: linear-gradient(90deg, #ed6877, #e84b62);
+  border-radius: 999px;
+}
+main .features .products.main {
+  gap: 18px;
+}
+main .features .products.main .item {
+  flex: 1 1 calc(25% - 18px);
+  min-width: 220px;
+}
+main .features .footer {
+  border-top: 1px solid var(--closet-border);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+main .features .footer li {
+  list-style: disc;
+  margin-left: 1.1em;
+  margin-bottom: 3px;
+}
+/* Featured promotional banners: keep Greedy Sale and Smart Sale side-by-side */
+main .banners {
+  padding: clamp(20px, 3vw, 40px) 0;
+}
+main .banners .banner {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+}
+main .banners .banner > .row {
+  min-width: 0;
+  width: auto !important;
+  flex: initial !important;
+}
+main .banners .banner .item {
+  position: relative;
+  min-height: clamp(220px, 28vw, 390px);
+  border-radius: var(--closet-radius);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--closet-shadow);
+}
+main .banners .banner .image,
+main .banners .banner .image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+main .banners .banner .item:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 19, 31, 0.18),
+    rgba(13, 19, 31, 0.01)
+  );
+}
+main .banners .banner .item.get-gray:after {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 19, 31, 0.12),
+    rgba(13, 19, 31, 0.18)
+  );
+}
+main .banners .banner .text-content {
+  position: absolute;
+  z-index: 1;
+  inset: auto auto 0 0;
+  padding: clamp(18px, 3vw, 34px);
+  max-width: 90%;
+  color: #012f35;
+  gap: 0.55rem;
+}
+main .banners .banner .text-content h4 {
+  color: #012f35;
+  font-size: clamp(0.78rem, 1.15vw, 1rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+main .banners .banner .text-content h3 {
+  font-size: clamp(1.35rem, 2.7vw, 2.5rem);
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+main .banners .banner .text-content h3 span {
+  font-size: clamp(0.95rem, 1.65vw, 1.35rem);
+  font-weight: 500;
+}
+main .banners .banner .primary-button {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+main .banners .banner .over-link {
+  z-index: 2;
+}
+main .product-categories .flexwrap {
+  gap: 16px;
+}
+main .product-categories .row {
+  flex: 1 1 180px;
+  min-width: 150px;
+}
+main .product-categories .content {
+  padding: 13px;
+  text-align: center;
+}
+main .product-categories .content h4 {
+  font-weight: 800;
+}
+main .product-categories .item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+main .widgets .row,
+main .widgets .item {
+  border-radius: 18px;
+}
+main .widgets h3,
+main .widgets h4 {
+  font-weight: 750;
+}
+main .newsletter {
+  padding: clamp(28px, 5vw, 60px) 0;
+}
+main .newsletter .box {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #172033, #283b59);
+  color: #fff;
+  padding: clamp(22px, 4vw, 40px);
+}
+main .newsletter h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 800;
+}
+main .newsletter p {
+  color: #d4dbe5;
+}
+main .newsletter input {
+  border-radius: 999px;
+  min-height: 48px;
+}
+main .newsletter button {
+  border-radius: 999px;
+  font-weight: 700;
+}
+main a:focus-visible,
+main button:focus-visible {
+  outline: 3px solid #f5a3b0;
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  main .slider .item {
+    min-height: 260px;
+  }
+  main .slider .text-content {
+    left: 20px;
+    max-width: 85%;
+  }
+  main .brands .wrapper {
+    justify-content: center;
+  }
+  main .brands .item {
+    flex: 1 1 28%;
+  }
+  main .banners .banner {
+    grid-template-columns: 1fr !important;
+  }
+  main .banners .banner .item {
+    min-height: 260px;
+  }
+  main .features .products.main .item {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 0;
+  }
+  main .sectop {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  main .container {
+    padding-inline: 14px;
+  }
+  main .slider .item {
+    min-height: 230px;
+  }
+  main .slider .text-content h2 {
+    font-size: 1.55rem;
+  }
+  main .slider .text-content h4 {
+    font-size: 0.72rem;
+  }
+  main .banners .banner .item {
+    min-height: 230px;
+  }
+  main .banners .banner .text-content {
+    padding: 20px;
+  }
+  main .features .products.main .item {
+    flex-basis: 100%;
+  }
+  main .products .content {
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  main * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Premium responsive Offer Ends At styling */
+main .offer {
+  --offer-accent: #d62828;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+main .offer > p {
+  margin: 0;
+  color: #343434;
+  font-size: clamp(0.78rem, 1.5vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+main .offer ul[id="countdown-timer"],
+main .offer ul.offer-countdown {
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 0.7vw, 8px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+main .offer ul[id="countdown-timer"] li,
+main .offer ul.offer-countdown li {
+  position: relative;
+  min-width: clamp(36px, 5vw, 48px);
+  padding: 0.55rem 0.35rem;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #202020, #383838);
+  color: #fff;
+  font:
+    700 clamp(0.85rem, 2vw, 1.15rem)/1.1 "Poppins",
+    sans-serif;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
+  font-variant-numeric: tabular-nums;
+}
+main .offer ul.offer-countdown li::after {
+  display: block;
+  margin-top: 4px;
+  color: #e6e6e6;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  content: attr(data-label);
+}
+main .offer.expired .offer-countdown li {
+  background: #777;
+}
+@media (max-width: 480px) {
+  main .offer {
+    gap: 0.5rem;
+  }
+  main .offer ul[id="countdown-timer"] li,
+  main .offer ul.offer-countdown li {
+    min-width: 34px;
+    padding: 0.45rem 0.25rem;
+    border-radius: 7px;
+  }
+}
