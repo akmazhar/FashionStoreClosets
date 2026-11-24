@@ -17,11 +17,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Google Fonts (include only necessary ones) -->
+      <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+      <!-- Remix Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 
 
@@ -44,48 +60,72 @@
 
         <header>
             <!-- Top Header Section -->
-            <div class="header-top mobile-hide">
-                <div class="container">
-                    <div class="wrapper flexitem">
-                        <div class="left">
-                            <ul class="flexitem main-links">
-                                <li><a href="https://akmazhar2475.hashnode.dev/">Blog</a></li>
-                                <li><a href="#">Featured Products</a></li>
-                                <li><a href="#">Wishlist</a></li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <ul class="flexitem main-links">
-                                <li><a href="/acc.html">Sign Up</a></li>
-                                <li><a href="/acc.html">My Account</a></li>
-                                <li><a href="#">Order Tracking</a></li>
-                                <li class="currency">
-                                    <a href="#">USD <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
-                                    <ul class="dropdown">
-                                        <li class="current"><a href="#">USD</a></li>
-                                        <li><a href="#">GBP</a></li>
-                                        <li><a href="#">CN</a></li>
-                                        <li><a href="#">BDT</a></li>
-                                        <li><a href="#">EURO</a></li>
-                                        <li><a href="#">CHF</a></li>
-                                    </ul>
-                                </li>
-                                <li class="language">
-                                    <a href="#">English <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
-                                    <ul class="dropdown">
-                                        <li class="current"><a href="#">English</a></li>
-                                        <li><a href="#">Arabic</a></li>
-                                        <li><a href="#">Chinese</a></li>
-                                        <li><a href="#">Bengali</a></li>
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">German</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+  <!-- ============================================
+       HEADER TOP BAR
+       ============================================ -->
+  <header class="header">
+    <div class="header-top mobile-hide">
+      <div class="container">
+        <div class="wrapper flexitem">
+
+          <!-- Left Section -->
+          <div class="left">
+            <ul class="flexitem main-links">
+              <li>
+                <a href="https://akmazhar2475.hashnode.dev/" target="_blank" rel="noopener">
+                  Blog
+                </a>
+              </li>
+              <li><a href="#">Featured Products</a></li>
+              <li><a href="#">Wishlist</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Section -->
+          <div class="right">
+            <ul class="flexitem main-links">
+              <li><a href="/acc.html">Sign Up</a></li>
+              <li><a href="/acc.html">My Account</a></li>
+              <li><a href="#">Order Tracking</a></li>
+
+              <!-- Currency -->
+              <li class="currency">
+                <a href="#">
+                  USD
+                  <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span>
+                </a>
+                <ul class="dropdown">
+                  <li class="current"><a href="#">USD — US Dollar</a></li>
+                  <li><a href="#">GBP — British Pound</a></li>
+                  <li><a href="#">CNY — Chinese Yuan</a></li>
+                  <li><a href="#">BDT — Bangladeshi Taka</a></li>
+                  <li><a href="#">EUR — Euro</a></li>
+                  <li><a href="#">CHF — Swiss Franc</a></li>
+                </ul>
+              </li>
+
+              <!-- Language -->
+              <li class="language">
+                <a href="#">
+                  English
+                  <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span>
+                </a>
+                <ul class="dropdown">
+                  <li class="current"><a href="#">English</a></li>
+                  <li><a href="#">العربية — Arabic</a></li>
+                  <li><a href="#">中文 — Chinese</a></li>
+                  <li><a href="#">বাংলা — Bengali</a></li>
+                  <li><a href="#">Français — French</a></li>
+                  <li><a href="#">Deutsch — German</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
             <!-- Main Navigation -->
             <div class="header-nav">
