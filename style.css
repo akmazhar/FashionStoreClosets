@@ -4517,68 +4517,180 @@ main button:focus-visible {
   }
 }
 
-/* Premium responsive Offer Ends At styling */
-main .offer {
-  --offer-accent: #d62828;
+/* =========================================
+   PRODUCT META: SOLD / FREE SHIPPING / STOCK
+   ========================================= */
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  width: 100%;
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--light-text-color);
+}
+
+.product-meta > span {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.product-meta .stock-danger {
+  color: var(--primary-color);
+  font-weight: var(--fw6);
+}
+
+/* Keep the three details readable on smaller screens */
+@media (max-width: 480px) {
+  .product-meta {
+    justify-content: flex-start;
+    gap: 6px 10px;
+    font-size: 10px;
+  }
+}
+
+/* ==================================================
+   TRENDING PRODUCTS — CLEAN, WHITE & BACKGROUND-FREE
+   Offer timer and offer image have no colored boxes.
+================================================== */
+main .trending .products.big .item,
+main .trending .products.big,
+main .trending .products.big .media,
+main .trending .products.big .media .image,
+main .trending .products.big .content,
+main .trending .offer {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+main .trending .products.big .item {
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+/* Premium framed showcase for the large Trending Product image */
+main .trending .products.big .media {
+  width: 100% !important;
+  padding: clamp(12px, 2.2vw, 24px) !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  background: #fff !important;
+}
+main .trending .products.big .media .image {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  overflow: hidden !important;
+  padding: clamp(10px, 1.8vw, 20px) !important;
+  border: 1px solid #e8e8ec !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, #ffffff, #fafafa) !important;
+  box-shadow:
+    0 12px 32px rgba(20, 20, 40, 0.07),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.9) !important;
+}
+/* Fine accent outline inset inside the showcase frame */
+main .trending .products.big .media .image::before {
+  content: \"\";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(232, 75, 98, 0.2);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 1;
+}
+main .trending .products.big .media .image img {
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border-radius: 12px !important;
+}
+main .trending .offer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.65rem;
-  margin: 1rem 0;
+  padding: 0 !important;
+  margin: 1rem 0 !important;
+  color: inherit !important;
 }
-main .offer > p {
-  margin: 0;
-  color: #343434;
+main .trending .offer > p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #f20b6b !important;
+  background: transparent !important;
   font-size: clamp(0.78rem, 1.5vw, 0.95rem);
   font-weight: 700;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-main .offer ul[id="countdown-timer"],
-main .offer ul.offer-countdown {
+main .trending .offer ul[id="countdown-timer"],
+main .trending .offer ul.offer-countdown {
   display: flex;
   align-items: center;
-  gap: clamp(4px, 0.7vw, 8px);
-  padding: 0;
-  margin: 0;
+  flex-wrap: wrap;
+  gap: 1px;
+  padding: 0 !important;
+  margin: 0 !important;
   list-style: none;
+  background: transparent !important;
 }
-main .offer ul[id="countdown-timer"] li,
-main .offer ul.offer-countdown li {
-  position: relative;
-  min-width: clamp(36px, 5vw, 48px);
-  padding: 0.55rem 0.35rem;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #202020, #383838);
-  color: #fff;
-  font:
-    700 clamp(0.85rem, 2vw, 1.15rem)/1.1 "Poppins",
-    sans-serif;
+main .trending .offer ul[id="countdown-timer"] li,
+main .trending .offer ul.offer-countdown li {
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #202020 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.4;
   text-align: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
   font-variant-numeric: tabular-nums;
 }
-main .offer ul.offer-countdown li::after {
+main .trending .offer ul.offer-countdown li::after {
   display: block;
-  margin-top: 4px;
-  color: #e6e6e6;
+  margin-top: 3px;
+  color: #666 !important;
   font-size: 0.55rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   content: attr(data-label);
 }
-main .offer.expired .offer-countdown li {
-  background: #777;
+main .trending .offer.expired ul[id="countdown-timer"] li,
+main .trending .offer.expired ul.offer-countdown li {
+  color: #202020 !important;
+  background: transparent !important;
+}
+main .trending .products.big .content {
+  padding: 20px 0 10px !important;
 }
 @media (max-width: 480px) {
-  main .offer {
-    gap: 0.5rem;
+  main .trending .offer {
+    gap: 8px;
   }
-  main .offer ul[id="countdown-timer"] li,
-  main .offer ul.offer-countdown li {
-    min-width: 34px;
-    padding: 0.45rem 0.25rem;
-    border-radius: 7px;
+  main .trending .offer ul[id="countdown-timer"] li,
+  main .trending .offer ul.offer-countdown li {
+    font-size: 0.85rem;
+  }
+  main .trending .products.big .content {
+    padding-top: 14px !important;
   }
 }
